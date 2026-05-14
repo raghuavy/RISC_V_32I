@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+=== Bubble Sort on RV64I CPU ===
+Input:    [5, 3, 8, 1, 9, 2, 7, 4]
+Expected: [1, 2, 3, 4, 5, 7, 8, 9]
+

@@ -1,0 +1,408 @@
+
+*** Running vivado
+    with args -log tb_cpu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_cpu.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun May  3 14:23:00 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source tb_cpu.tcl -notrace
+Command: synth_design -top tb_cpu -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39192
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1086.695 ; gain = 537.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tb_cpu' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:4]
+WARNING: [Synth 8-11581] system task call 'dumpfile' not supported [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:20]
+WARNING: [Synth 8-11581] system task call 'dumpvars' not supported [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:21]
+WARNING: [Synth 8-6896] event control except as first statement of always block inside initial block, initial block items will be ignored [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:24]
+INFO: [Synth 8-251] TIMEOUT [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:64]
+WARNING: [Synth 8-11581] system task call 'finish' not supported [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:64]
+WARNING: [Synth 8-85] always block has no event control specified [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:9]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'cpu_top' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/cpu_top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/instruction_memory.sv:3]
+INFO: [Synth 8-3876] $readmem data file 'machine_code.mem' is read successfully [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/instruction_memory.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/instruction_memory.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fetch' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/fetch.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/fetch.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/register_file.sv:3]
+INFO: [Synth 8-6085] Hierarchical reference on 'regs' stops possible memory inference [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/register_file.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/register_file.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'decode' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/decode.sv:4]
+INFO: [Synth 8-226] default block is never used [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/decode.sv:135]
+INFO: [Synth 8-6155] done synthesizing module 'decode' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/decode.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'hazard_unit' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/hazard_unit.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_unit' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/hazard_unit.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'execute' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/execute.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/alu.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/alu.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'execute' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/execute.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'mem_stage' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/mem_stage.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'mem_stage' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/mem_stage.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/data_memory.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/data_memory.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_top' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/cpu_top.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'tb_cpu' (0#1) [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/tb_cpu.sv:4]
+WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/data_memory.sv:16]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [D:/RISC-V/RISC-V/RISC-V.srcs/sources_1/new/data_memory.sv:59]
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Invalid write to RAM. 
+	3: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	4: Invalid write to RAM. 
+	5: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	6: Invalid write to RAM. 
+	7: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	8: Invalid write to RAM. 
+	9: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	10: Invalid write to RAM. 
+	11: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	12: Invalid write to RAM. 
+	13: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	14: Invalid write to RAM. 
+	15: Invalid write to RAM. 
+	16: No valid clock found for write to RAM. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'mem_reg' since this is dissolved into (32768) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-7129] Port addr[63] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[62] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[61] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[60] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[59] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[58] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[57] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[56] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[55] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[54] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[53] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[52] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[51] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[50] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[49] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[48] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[47] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[46] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[45] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[44] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[43] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[42] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[41] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[40] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[39] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[38] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[37] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[36] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[35] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[34] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[33] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[32] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][63] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][62] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][61] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][60] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][59] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][58] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][57] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][56] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][55] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][54] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][53] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][52] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][51] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][50] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][49] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][48] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][47] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][46] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][45] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][44] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][43] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][42] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][41] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][40] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][39] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][38] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][37] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][36] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][35] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][34] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][33] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][32] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][31] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][30] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][29] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][28] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][27] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][26] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][25] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][24] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][23] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][22] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][21] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][20] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][19] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][18] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][17] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ex_mem[pc_target][16] in module mem_stage is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2353.250 ; gain = 1803.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2353.250 ; gain = 1803.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2353.250 ; gain = 1803.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:04 ; elapsed = 00:09:24 . Memory (MB): peak = 2679.262 ; gain = 2129.582
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 2     
+	   3 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 42    
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 4096  
+	                5 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 10    
+	   3 Input   64 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 10232 
+	   4 Input    8 Bit        Muxes := 1024  
+	   3 Input    8 Bit        Muxes := 1536  
+	 181 Input    8 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 5     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_read" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "reg_write" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_read" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "reg_write" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][31]' (FDCE) to 'u_decode/id_ex_reg[immediate][32]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][32]' (FDCE) to 'u_decode/id_ex_reg[immediate][33]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][33]' (FDCE) to 'u_decode/id_ex_reg[immediate][34]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][34]' (FDCE) to 'u_decode/id_ex_reg[immediate][35]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][35]' (FDCE) to 'u_decode/id_ex_reg[immediate][36]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][36]' (FDCE) to 'u_decode/id_ex_reg[immediate][37]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][37]' (FDCE) to 'u_decode/id_ex_reg[immediate][38]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][38]' (FDCE) to 'u_decode/id_ex_reg[immediate][39]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][39]' (FDCE) to 'u_decode/id_ex_reg[immediate][40]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][40]' (FDCE) to 'u_decode/id_ex_reg[immediate][41]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][41]' (FDCE) to 'u_decode/id_ex_reg[immediate][42]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][42]' (FDCE) to 'u_decode/id_ex_reg[immediate][43]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][43]' (FDCE) to 'u_decode/id_ex_reg[immediate][44]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][44]' (FDCE) to 'u_decode/id_ex_reg[immediate][45]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][45]' (FDCE) to 'u_decode/id_ex_reg[immediate][46]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][46]' (FDCE) to 'u_decode/id_ex_reg[immediate][47]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][47]' (FDCE) to 'u_decode/id_ex_reg[immediate][48]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][48]' (FDCE) to 'u_decode/id_ex_reg[immediate][49]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][49]' (FDCE) to 'u_decode/id_ex_reg[immediate][50]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][50]' (FDCE) to 'u_decode/id_ex_reg[immediate][51]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][51]' (FDCE) to 'u_decode/id_ex_reg[immediate][52]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][52]' (FDCE) to 'u_decode/id_ex_reg[immediate][53]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][53]' (FDCE) to 'u_decode/id_ex_reg[immediate][54]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][54]' (FDCE) to 'u_decode/id_ex_reg[immediate][55]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][55]' (FDCE) to 'u_decode/id_ex_reg[immediate][56]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][56]' (FDCE) to 'u_decode/id_ex_reg[immediate][57]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][57]' (FDCE) to 'u_decode/id_ex_reg[immediate][58]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][58]' (FDCE) to 'u_decode/id_ex_reg[immediate][59]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][59]' (FDCE) to 'u_decode/id_ex_reg[immediate][60]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][60]' (FDCE) to 'u_decode/id_ex_reg[immediate][61]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[immediate][61]' (FDCE) to 'u_decode/id_ex_reg[immediate][62]'
+INFO: [Synth 8-3886] merging instance 'u_decode/id_ex_reg[wb_src][0]' (FDCE) to 'u_decode/id_ex_reg[mem_read]'
+INFO: [Synth 8-3886] merging instance 'u_execute/ex_mem_reg[wb_src][0]' (FDC) to 'u_execute/ex_mem_reg[mem_read]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:13:21 ; elapsed = 00:14:46 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:13:30 ; elapsed = 00:14:56 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:13:30 ; elapsed = 00:14:56 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |FDRE |  1984|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |  1986|
+|2     |  dut    |cpu_top       |  1984|
+|3     |    u_rf |register_file |  1984|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 257 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+Synthesis Optimization Complete : Time (s): cpu = 00:13:33 ; elapsed = 00:14:59 . Memory (MB): peak = 2773.656 ; gain = 2223.977
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2773.656 ; gain = 0.000
+WARNING: [Netlist 29-101] Netlist 'tb_cpu' is not ideal for floorplanning, since the cellview 'register_file' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2773.656 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6bd79e03
+INFO: [Common 17-83] Releasing license: Synthesis
+84 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:13:36 ; elapsed = 00:15:04 . Memory (MB): peak = 2773.656 ; gain = 2227.953
+INFO: [Common 17-1381] The checkpoint 'D:/RISC-V/RISC-V/RISC-V.runs/synth_1/tb_cpu.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file tb_cpu_utilization_synth.rpt -pb tb_cpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May  3 14:38:11 2026...
