@@ -7,20 +7,8 @@ A 5-stage in-order pipelined RISC-V CPU implementing the RV64I base integer inst
 ## Architecture Overview
 
 The CPU is a classic **5-stage pipeline**: Fetch → Decode → Execute → Memory → Writeback.
+<img width="1829" height="860" alt="image" src="https://github.com/user-attachments/assets/a4b3a141-d03a-4165-9956-dffffb8715e4" />
 
-```
-┌────────┐   IF/ID   ┌────────┐   ID/EX   ┌─────────┐   EX/MEM   ┌──────────┐   MEM/WB   ┌────────────┐
-│ Fetch  │ ────────► │ Decode │ ────────► │ Execute │ ─────────► │   Mem    │ ─────────► │ Writeback  │
-└────────┘           └────────┘           └─────────┘            └──────────┘            └────────────┘
-     ▲                                         │ branch/jump target                              │ rd_data
-     └─────────────────────────────────────────┘                                                 │
-                        branch redirect                             ┌────────────────────────────┘
-                                                                    │ register write
-                                                             ┌──────┴──────┐
-                                                             │ Register    │
-                                                             │   File      │
-                                                             └─────────────┘
-```
 
 Pipeline registers (`if_id_t`, `id_ex_t`, `ex_mem_t`, `mem_wb_t`) are defined as packed structs in `risc_pkg.sv`.
 
